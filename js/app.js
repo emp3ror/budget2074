@@ -118,6 +118,66 @@
         }]
     });
 
+    var names = data.map(function(item){return item.name;});
+    var funds = data.map(function(item){return item.y;});
+
+    console.log(funds);
+
+    Highcharts.chart('containerBar', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'barchart - budget 2074/75'
+        },
+        
+        xAxis: {
+            categories: names,
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'in thousand',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: ' millions'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: -40,
+            y: 80,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+            shadow: true,
+            enabled : false
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'Year 1800',
+            data: funds
+        }]
+    });
+
 
 
 })(jQuery);
