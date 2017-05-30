@@ -119,7 +119,7 @@
     });
 
     var names = data.map(function(item){return item.name;});
-    var funds = data.map(function(item){return item.y;});
+    var funds = data.map(function(item){return parseInt(item.fund.replace(/\,/g,""));});
 
     console.log(funds);
 
@@ -148,7 +148,7 @@
             }
         },
         tooltip: {
-            valueSuffix: ' millions'
+            valueSuffix: ' thousand'
         },
         plotOptions: {
             bar: {
@@ -173,7 +173,7 @@
             enabled: false
         },
         series: [{
-            name: 'Year 1800',
+            name: 'budget',
             data: funds
         }]
     });
