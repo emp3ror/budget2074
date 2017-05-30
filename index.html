@@ -39,6 +39,14 @@
                 </tr>
             </table>
         </div>
+
+
+        <div class="row">
+            <div class="alert alert-danger">Charts</div>
+            <div id="container" style="min-width: 310px; height: 500px; max-width: 700px; margin: 0 auto"></div>
+
+        </div>
+
     </div>
 <!-- <div class="text"></div> -->
 
@@ -48,13 +56,15 @@
         <td>{{inc @index}}</td>
         <td>{{name}}</td>
         <td class='num'>{{fund}} </td>
-        <td class="num">{{percentage}} </td>
+        <td class="num">{{y}} </td>
     </tr>
   {{/each}}
 </script>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
 <script src="js/app.js"></script>
 </body>
 </html>
