@@ -106,7 +106,7 @@
             type: 'pie'
         },
         title: {
-            text: 'Pie chart - budget 2074/2075'
+            text: 'आ.ब २०७४/०७५ को बजेट बिभाजन'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.y:.1f}%</b> <br /> {point.fund}'
@@ -146,7 +146,7 @@
             type: 'bar'
         },
         title: {
-            text: 'barchart - budget 2074/75 and 2073/74'
+            text: 'बजेट बिभाजन तुलना ( ०७३/७४ र ०७४/७५)'
         },
         
         xAxis: {
